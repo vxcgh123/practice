@@ -1,0 +1,225 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --bule-color: #045fd4;
+  --red-color: #ff0000;
+  --gray-dark-color: #909090;
+  --gray-light-color: #e0e0e0;
+
+    /* Size */
+    --padding: 12px;
+    --avatar-size: 36px;
+    /* Font Size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+  margin : 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Beau Rivage', cursive;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color:transparent;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+}
+
+header .logo i {
+  color: var(--red-color);
+}
+
+header .icons i {
+  padding: calc(var(--padding) /2);
+}
+
+/* Video Plater */
+.player {
+  position: sticky;
+  top: 0;
+  height: 315px;
+  text-align: center;
+  background-color: var(--black-color);
+}
+
+.player iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+}
+
+/* Section Info */
+
+/* MetaData */
+.info {
+  padding: var(--padding);
+}
+.info .metadata .hashtags {
+  display: flex;
+  color: var(--bule-color);
+  font-size: var(--font-medium);
+}
+
+.info .metadata .hashtags li {
+  padding-right: calc(var(--padding) /2 );
+}
+
+.info .metadata .titileAndButton {
+  display: flex;
+  font-size: var(--font-large);
+}
+
+.info .metadata .titileAndButton .moreBtn {
+  height: 100%;
+}
+
+.info .metadata .views {
+  font-size: var(--font-small);
+  color: var(--gray-dark-color);
+}
+
+/* Action Button */
+.info .action {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--padding);
+}
+
+.info .action button {
+  display: flex;
+  font-size: var(--font-large);
+  flex-direction: column;
+}
+
+.info .action button i {
+  margin: 0 auto;
+}
+
+.info .action button i.active {
+  color: var(--bule-color);
+}
+
+/* Channel */
+.channel {
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px var(--gray-light-color);
+  border-bottom: 1px solid var(--gray-light-color);
+}
+
+.channel .metadata {
+  display: flex;
+  align-items: center;
+}
+
+.channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+
+}
+
+.channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.channel .metadata .info .name {
+  font-size: var(--font-medium);
+}
+
+.channel .metadata .info .subscribers {
+  font-size: var(--font-small);
+}
+
+.channel .subscribe {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+
+/* Section Upnext */
+.upnext {
+  padding: var(--padding);
+}
+
+.upnext .next {
+  padding: var(--padding);
+}
+
+.upnext .nextVideo{
+  display: flex;
+  padding: var(--padding);
+}
+
+.upnext .nextVideo .nextinfo {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--padding);
+}
+
+.upnext .nextVideo .nextimg {
+  flex: 1 1 35%;
+}
+
+.upnext .nextVideo .nextinfo {
+  flex: 1 1 60%;
+}
+
+.upnext .nextVideo .nextmoreBtn {
+  flex: 1 1 5%;
+  align-self: flex-start;
+  padding-top: var(--padding) ;
+}
+
+.upnext .nextVideo .nextinfo .title {
+  font-size: var(--font-small);
+}
+
+.upnext .nextVideo .nextinfo .name,
+.upnext .nextVideo .nextinfo .views {
+  font-size: var(--font-micro);
+  color: var(--gray-dark-color);
+}
+
+.upnext .nextVideo .nextimg img {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+  .InfoAndUpnext {
+    display: flex;
+    justify-content: row;
+  }
+}
+
+
+
+
+
+
+
